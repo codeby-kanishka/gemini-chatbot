@@ -1,0 +1,235 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;500;600&family=Matemasie&family=Pacifico&family=Poppins:wght@400;500;600&family=Signika+Negative:wght@300..700&display=swap');
+
+*{
+    margin : 0px;
+    padding : 0px;
+    box-sizing: border-box;/*height and width will include border and padding*/
+    font-family: "Poppins", Helvetica, sans-serif;
+}
+body{
+    color : #edf3ff;
+    background-color: #101623;
+}
+
+.container{
+    padding : 32px 0px 60px;
+    overflow-y: auto;
+    max-height: calc(100vh - 127px);
+    scrollbar-color:  #626a7f transparent;
+}
+.container :where(.app_header,.suggestions,.prompt_box,.message,.disclaimer){
+    margin : auto;/*center within the parent element*/
+    width : 100%;
+    padding : 0 20px;
+    max-width: 980px;/*agar screen 980 se expand huyi toh isse upar elements expand nhi honge*/
+}
+.container .app_header{
+    margin-top : 4vh;
+}
+
+.app_header .heading{
+    font-size: 3rem;
+    width : fit-content; /*jo bhi color box hoga woh text ke aropund hi jayega*/
+    background:linear-gradient(to right,#1d7efd, #8f6fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.app_header .subheading{
+    font-size: 2.6rem;
+    margin-top : -5px;
+    color : #97a7ca;
+}
+.container .suggestions{
+    display : flex;
+    gap : 15px;
+    margin-top : 9.5vh;
+    list-style-type: none;
+    overflow-x: none;
+}
+.suggestions .suggestion_items{
+    width : 228px;
+    padding : 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: #283045;
+   
+}
+.suggestions .suggestion_items p{
+    font-size: 1.1rem;
+}
+.suggestions .suggestion_items span{
+       height : 45px;
+       width : 45px;
+       margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #101623;
+        border-radius: 50%;
+        color : #1d7efd      
+}
+
+.suggestions .suggestion_items:nth-child(2) span{
+    color : #28a745;
+}
+.suggestions .suggestion_items:nth-child(3) span{
+    color : #ffc107;
+}
+.suggestions .suggestion_items:nth-child(4) span{
+    color : #6f42c1;
+}
+.suggestions .suggestion_items:hover{
+    background-color : #333e58;
+}
+
+.prompt_container{
+    position: fixed;
+    bottom : 0px;
+    left : 0px;
+    width : 100%;
+    background-color: #101623;
+}
+.prompt_container :where(.prompt_box,.prompt_form,.prompt_actions){
+    display : flex;
+    gap : 15px;
+    align-items: center;
+    height : 56px;
+}
+.prompt_container .prompt_form{
+    width:100%;
+    height : 100%;
+    border-radius: 130px;
+    background-color: #283045;
+}
+.prompt_form .prompt_input{
+    width : 100%;
+    height : 100%;
+    border : none;
+    outline: none;
+    background: none;
+    padding-left: 24px;
+    color : #edf3ff;
+    font-size: 1rem;
+}
+.prompt_form .prompt_input::placeholder{
+    color : #c3cdde;
+}
+.prompt_actions button{
+    width : 56px;
+    height : 100%;
+    border-radius: 50%;
+    border : none;
+    background-color: #283045;
+    cursor : pointer;
+    font-size: 1.4rem;
+    color : #edf3ff;
+    transition: 0.3 ease;
+}
+.prompt_box :where(#theme_toggle,#delete_chats){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prompt_box button:hover{
+    background-color: #333e58;
+}
+.prompt_container .disclaimer{
+    text-align: center;
+    font-size: 0.9rem;
+    color:#c3cdde;
+    padding : 15px;
+}
+ 
+.prompt_actions #upload_file{
+    color : #fff;
+    background-color: #1d7efd;
+    display: none;
+}
+.prompt_form .prompt_input:valid ~ .prompt_actions #upload_file{
+    display: block;
+}
+.prompt_actions #upload_file:hover{
+    background-color: #0264e3;
+}
+.prompt_form .prompt_actions{
+    gap : 5px;
+    margin-right: 7px;
+}
+.prompt_actions button{
+    width : 45px;
+    height : 45px;
+}
+.additional_btns{
+    width : 63px;
+    height : 100%;
+    border-radius: 50%;
+    border : none;
+    outline : none;
+    cursor : pointer;
+    background-color: #283045;
+    color : #edf3ff;
+}
+.container :is(.app_header, .suggestions){
+    display: none;
+}
+
+.container .chat_container{
+    display: flex;
+    flex-direction: column;
+    gap : 20px;
+}
+.chat_container .message{
+    display : flex;
+    gap : 11px;
+    align-items: center;
+}
+.chat_container .message_text{
+    padding : 3px 16px;
+    word-break: break-word;
+    white-space: pre-line;
+}
+.chat_container .bot_message{
+    margin : 9px auto;
+}
+.chat_container .bot_message .avatar{
+    height : 43px;
+    width : 43px;
+    margin-right: -7px;
+    align-self: flex-start;
+    flex-shrink: 0;
+    padding:6px;  
+}
+.chat_container .avatar.loading{
+    animation : rotate 4s linear infinite;
+}
+ @keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+ }
+.chat_container .user_message {
+    flex-direction: column;
+    align-items: flex-end;
+}
+.chat_container .user_message .message_text{
+    padding : 12px 16px;
+    border-radius: 13px;
+    max-width: 75%;
+    background-color: #283045;
+}
+.chat_container .bot_message .loading .avatar{
+    border-color: linear-gradient(0deg,#1d7efd, #8f6fff);
+    border-radius: 50%;
+    animation : rotate 3s infinite;
+}
+/* background-color: #283045;
+border : 1px solid #333e58;
+  border-radius: 50%;*/
