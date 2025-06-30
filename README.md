@@ -1,3 +1,4 @@
+
 # 💬 Gemini Chatbot
 
 A clean and responsive AI chatbot built with **HTML, CSS, and JavaScript**, powered by the **Gemini API**. This project demonstrates real-time interaction with a conversational AI model through a custom UI — perfect for learning frontend-to-API integration.
@@ -6,17 +7,17 @@ A clean and responsive AI chatbot built with **HTML, CSS, and JavaScript**, powe
 
 ## 🚀 Features
 
-- ✅ Real-time AI responses using the Gemini API
-- 🎨 Minimal, responsive, and mobile-friendly UI
-- 🧠 Easy to customize and extend
-- 🛠️ No frameworks — pure HTML/CSS/JavaScript
+- ✅ Real-time AI responses using the Gemini API  
+- 🎨 Minimal, responsive, and mobile-friendly UI  
+- 🧠 Easy to customize and extend  
+- 🛠️ No frameworks — pure HTML/CSS/JavaScript  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript
-- **API**: Gemini (Google AI)
+- **Frontend**: HTML, CSS, JavaScript  
+- **API**: Gemini (Google AI)  
 
 ---
 
@@ -28,6 +29,8 @@ gemini-chatbot/
 ├── script.js # API logic
 ├── .gitignore
 ├── README.md
+
+---
 
 ## 📦 Getting Started
 
@@ -55,3 +58,9 @@ Just open index.html in your browser — no server needed.
  Add voice input/output
 
  Deploy to GitHub Pages or Netlify
+
+👩‍💻 Author
+Kanishka
+GitHub: @codeby-kanishka
+
+⭐ Star this repo if you found it helpful!
