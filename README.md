@@ -42,25 +42,25 @@ cd gemini-chatbot
 ```
 2. Add Your Gemini API Key
 Open script.js and insert your Gemini API key:
-
-javascript
-Copy
-Edit
 const apiKey = "YOUR_GEMINI_API_KEY";
+
 3. Run the App
 Just open index.html in your browser — no server needed.
 
-🔮 Roadmap
- Add dark/light mode toggle
+---
 
- Save chat history
+## 🔮 Roadmap
+1. Add dark/light mode toggle
+2. Save chat history
+3.  3.Add voice input/output
+4. Deploy to GitHub Pages or Netlify
 
- Add voice input/output
+---
 
- Deploy to GitHub Pages or Netlify
-
-👩‍💻 Author
+## 👩‍💻 Author
 Kanishka
 GitHub: @codeby-kanishka
+
+---
 
 ⭐ Star this repo if you found it helpful!
